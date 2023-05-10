@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       backgroundColor:{
         'custom-color':'#F9E8D0',
+        'dark-custom-color':'#1D2A32',
       },
       textColor:{
         'linkTextColor':'#CC6832',

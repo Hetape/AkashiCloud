@@ -1,9 +1,10 @@
 import ApexChart from "./ApesCharts";
-
+import { useTheme } from '../ThemeContext';
 export const Landing = () => {
+    const {theme} = useTheme()
     return (
         <>          
-            <div className="bg-custom-color flex flex-col items-center lg:py-32 lg:justify-center">
+            <div className={`bg-custom-color ${theme==='dark' ? 'text-white bg-dark-custom-color' : 'text-gray-900 bg-custom-color'} flex flex-col items-center lg:py-32 lg:justify-center`}>
                 <div className="w-full px-10">
                     <div className="bg-transparent flex justify-center py-10">
                         <div className='flex lg:hidden bg-cover bg-center w-24 h-8 bg-[url("./img/Akashi4_1.png")]'></div>
@@ -13,7 +14,7 @@ export const Landing = () => {
                             <ApexChart/>
                             <div className="mb-[30px] py-4 flex flex-col bg-transparent border-2 rounded-3xl px-8"
                             style={{boxShadow: "-4px 0px 4px rgba(0, 0, 0, 0.25), 0px -4px 4px rgba(0, 0, 0, 0.25), 4px 0px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)"}}>
-                                <div className="flex flex-row items-end">
+                                <div className="flex flex-row justify-between">
                                     <div>AKASHI Holders</div>
                                     <div>1,263</div>
                                 </div>
